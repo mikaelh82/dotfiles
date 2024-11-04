@@ -16,4 +16,7 @@ spec("user.telescope")
 spec("user.whichkey")
 spec("user.autopairs")
 spec("user.indent-blankline")
+spec("user.dashboard")
+spec("user.tmux-navigation")
+
 require("user.lazy")
