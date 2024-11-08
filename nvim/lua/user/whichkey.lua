@@ -46,6 +46,35 @@ return {
 			{ "<leader>lw", "<cmd>Telescope lsp_workspace_symbols<CR>", desc = "Workspace Symbols" },
 			{ "<leader>lR", "<cmd>LspRestart<CR>", desc = "Restart LSP" },
 
+			{ "<leader>c", group = "Copilot" },
+			{ "<leader>cn", "<cmd>lua require('copilot.suggestion').next()<cr>", desc = "Next suggestion" },
+			{ "<leader>cp", "<cmd>lua require('copilot.suggestion').prev()<cr>", desc = "Previous suggestion" },
+			{ "<leader>cd", "<cmd>lua require('copilot.suggestion').dismiss()<cr>", desc = "Dismiss suggestion" },
+			{ "<leader>ca", "<cmd>lua require('copilot.suggestion').accept()<cr>", desc = "Accept suggestion" },
+			{
+				"<leader>ct",
+				"<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<cr>",
+				desc = "Toggle auto trigger",
+			},
+			{ "<leader>cP", "<cmd>Copilot panel<cr>", desc = "Open panel" },
+
+			{ "<leader>o", group = "Obsidian" },
+			{ "<leader>on", "<cmd>ObsidianNew<cr>", desc = "New Note" },
+			{ "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", desc = "Find Note" },
+			{ "<leader>og", "<cmd>ObsidianGrep<cr>", desc = "Search Notes Content" },
+			{ "<leader>oo", "<cmd>ObsidianOpen<cr>", desc = "Open in Obsidian" },
+			{ "<leader>os", "<cmd>ObsidianSearch<cr>", desc = "Search in Vault" },
+			{ "<leader>oa", "<cmd>ObsidianBacklinks<cr>", desc = "Show Backlinks" },
+			{ "<leader>od", "<cmd>ObsidianToday<cr>", desc = "Today's Note" },
+			{ "<leader>oy", "<cmd>ObsidianYesterday<cr>", desc = "Yesterday's Note" },
+			{ "<leader>om", "<cmd>ObsidianTomorrow<cr>", desc = "Tomorrow's Note" },
+			{ "<leader>ol", "<cmd>ObsidianLinkNew<cr>", desc = "Create New Link" },
+			{ "<leader>ot", "<cmd>ObsidianTags<cr>", desc = "List Tags" },
+			{ "<leader>ob", "<cmd>ObsidianBrowser<cr>", desc = "Browse Vault" },
+
+			-- Visual mode mappings
+			{ "<leader>ol", ":'<,'>ObsidianLinkNew<cr>", desc = "Create Link from Selection", mode = "v" },
+
 			-- Workspace group
 			{ "<leader>w", group = "Workspace" },
 			{ "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", desc = "Add Workspace Folder" },

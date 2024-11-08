@@ -91,9 +91,11 @@ return {
 		local lua_ls = require("user.lspconfig.servers.lua_ls")
 		local web = require("user.lspconfig.servers.web")
 		local pyright = require("user.lspconfig.servers.pyright")
+		local terraform_ls = require("user.lspconfig.servers.terraformls")
+		local tflint = require("user.lspconfig.servers.tflint")
 
 		-- Merge all server configurations
-		local servers = vim.tbl_extend("force", {}, clangd, lua_ls, web, pyright)
+		local servers = vim.tbl_extend("force", {}, clangd, lua_ls, web, pyright, terraform_ls, tflint)
 
 		-- Setup all servers
 		for server, config in pairs(servers) do

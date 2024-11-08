@@ -20,6 +20,7 @@ return {
 				-- Formatting
 				formatting.prettier, -- javascript, typescript, etc.
 				formatting.stylua, -- lua
+				formatting.terraform_fmt,
 				formatting.black, -- python
 				formatting.clang_format.with({
 					command = llvm_prefix .. "clang-format",
@@ -29,8 +30,6 @@ return {
 				require("none-ls.diagnostics.eslint"), -- ESLint from none-ls-extras
 				diagnostics.pylint,
 				diagnostics.mypy,
-
-				-- Code Actions
 				code_actions.gitsigns,
 			},
 			-- Format on save

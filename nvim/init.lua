@@ -18,5 +18,7 @@ spec("user.autopairs")
 spec("user.indent-blankline")
 spec("user.dashboard")
 spec("user.tmux-navigation")
+spec("user.obsidian")
+spec("user.copilot")
 
 require("user.lazy")
